@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Seccion de configuracion -->
+     <section>
+        <h2>Configuración</h2>
+
+        <fieldset>
+            <legend>Preferencias</legend>
+
+            <label for="foto">Subir foto:</label>
+            <input type="file" name="foto" id="foto" accept=".jpg,.png">
+
+            <label for="fecha">Fecha de nacimiento:</label>
+            <input type="date" id="fecha" name="fecha">
+
+            <label>Género:</label>
+            <label><input type="radio" name="genero" value="hombre"> Hombre</label>
+            <label><input type="radio" name="genero" value="mujer"> Mujer</label>
+            <label><input type="radio" name="genero" value="otro"> Otro</label>
+
+            <label for="color">Color de la página:</label>
+            <input type="color" id="color" name="color" value="#00000">
+        </fieldset>
+
+        <fieldset>
+            <legend>Cambio de contraseña</legend>
+
+            <label for="nombre">Nombre de Usuario:</label>
+            <input type="text" id="nombre" placeholder="Ej: locotron52" required>
+
+            <label for="oldPassword"></label>
+        </fieldset>
+     </section>
+</body>
+</html>
