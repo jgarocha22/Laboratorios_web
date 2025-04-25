@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa de CSS</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header-principal">
+        <h1>Guía Completa de CSS</h1>
+        <p class="subtitulo">Ejemplos prácticos de todas las propiedades CSS</p>
+    </header>
+
+    <nav class="menu-principal">
+        <ul>
+            <li><a href="#texto">Texto y Fuentes</a></li>
+            <li><a href="#fondo">Fondos</a></li>
+            <li><a href="#modelo-caja">Modelo de Caja</a></li>
+            <li><a href="#listas">Listas</a></li>
+            <li><a href="#tablas">Tablas</a></li>
+            <li><a href="#flexbox">Flexbox</a></li>
+            <li><a href="#grid">Grid</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenido-principal">
+        <!-- Sección 1: Propiedades de Texto y Fuentes -->
+        <section id="texto" class="seccion">
+            <h2>1. Propiedades de Texto y Fuentes</h2>
+            
+            <article class="ejemplo">
+                <h3>Font Family</h3>
+                <p class="font-family-ejemplo">Este texto usa la fuente Montserrat</p>
+                <p class="font-family-generic">Este texto usa la familia genérica sans-serif</p>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Font Size</h3>
+                <p class="font-size-px">Texto a 24px</p>
+                <p class="font-size-em">Texto a 1.5em</p>
+                <p class="font-size-rem">Texto a 1.5rem</p>
+                <p class="font-size-vw">Texto a 2vw</p>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Font Weight</h3>
+                <p class="font-weight-light">Texto light (300)</p>
+                <p class="font-weight-normal">Texto normal (400)</p>
+                <p class="font-weight-bold">Texto bold (700)</p>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Text Align</h3>
+                <p class="text-align-left">Texto alineado a la izquierda</p>
+                <p class="text-align-center">Texto centrado</p>
+                <p class="text-align-right">Texto alineado a la derecha</p>
+                <p class="text-align-justify">Texto justificado. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Text Decoration</h3>
+                <p class="text-decoration-underline">Texto subrayado</p>
+                <p class="text-decoration-overline">Texto con overline</p>
+                <p class="text-decoration-line-through">Texto tachado</p>
+                <p class="text-decoration-none">Texto sin decoración</p>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Text Transform</h3>
+                <p class="text-transform-uppercase">texto en mayúsculas</p>
+                <p class="text-transform-lowercase">TEXTO EN MINÚSCULAS</p>
+                <p class="text-transform-capitalize">texto con capitalización</p>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Line Height</h3>
+                <p class="line-height-normal">Altura de línea normal. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt.</p>
+                <p class="line-height-doble">Altura de línea doble. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt.</p>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Letter Spacing</h3>
+                <p class="letter-spacing-normal">Espaciado normal entre letras</p>
+                <p class="letter-spacing-wide">Espaciado amplio entre letras</p>
+                <p class="letter-spacing-narrow">Espaciado reducido</p>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Word Spacing</h3>
+                <p class="word-spacing-normal">Espaciado normal entre palabras</p>
+                <p class="word-spacing-wide">Espaciado amplio entre palabras</p>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Text Shadow</h3>
+                <p class="text-shadow-simple">Texto con sombra simple</p>
+                <p class="text-shadow-multiple">Texto con múltiples sombras</p>
+            </article>
+        </section>
+
+        <!-- Sección 2: Propiedades de Color y Fondo -->
+        <section id="fondo" class="seccion">
+            <h2>2. Propiedades de Color y Fondo</h2>
+            
+            <article class="ejemplo">
+                <h3>Color</h3>
+                <p class="color-nombre">Texto en color tomato</p>
+                <p class="color-hex">Texto en color #3498db</p>
+                <p class="color-rgb">Texto en color rgb(46, 204, 113)</p>
+                <p class="color-rgba">Texto en color rgba(155, 89, 182, 0.7)</p>
+                <p class="color-hsl">Texto en color hsl(120, 100%, 50%)</p>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Background Color</h3>
+                <div class="bg-color-ejemplo bg-color-solido">Fondo color sólido</div>
+                <div class="bg-color-ejemplo bg-color-transparente">Fondo transparente</div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Background Image</h3>
+                <div class="bg-image-ejemplo bg-image-simple"></div>
+                <div class="bg-image-ejemplo bg-image-repeat"></div>
+                <div class="bg-image-ejemplo bg-image-position"></div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Background Gradient</h3>
+                <div class="bg-gradient-ejemplo bg-gradient-linear"></div>
+                <div class="bg-gradient-ejemplo bg-gradient-radial"></div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Background Attachment</h3>
+                <div class="bg-attachment-ejemplo bg-attachment-fixed">
+                    <p>Fondo fijo (scroll con la página)</p>
+                </div>
+                <div class="bg-attachment-ejemplo bg-attachment-scroll">
+                    <p>Fondo que se desplaza</p>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Background Size</h3>
+                <div class="bg-size-ejemplo bg-size-cover"></div>
+                <div class="bg-size-ejemplo bg-size-contain"></div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Opacity</h3>
+                <div class="opacity-ejemplo opacity-1">Opacidad 1</div>
+                <div class="opacity-ejemplo opacity-07">Opacidad 0.7</div>
+                <div class="opacity-ejemplo opacity-03">Opacidad 0.3</div>
+            </article>
+        </section>
+
+        <!-- Sección 3: Modelo de Caja -->
+        <section id="modelo-caja" class="seccion">
+            <h2>3. Modelo de Caja (Margin, Border, Padding)</h2>
+            
+            <article class="ejemplo">
+                <h3>Margin</h3>
+                <div class="box-model-ejemplo margin-ejemplo">
+                    <div class="caja caja-margin">Caja con margen</div>
+                    <div class="caja caja-sin-margin">Caja sin margen</div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Padding</h3>
+                <div class="box-model-ejemplo padding-ejemplo">
+                    <div class="caja caja-padding">Caja con padding</div>
+                    <div class="caja caja-sin-padding">Caja sin padding</div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Border</h3>
+                <div class="box-model-ejemplo border-ejemplo">
+                    <div class="caja caja-border-simple">Borde simple</div>
+                    <div class="caja caja-border-doble">Borde doble</div>
+                    <div class="caja caja-border-redondeado">Borde redondeado</div>
+                    <div class="caja caja-border-estilos">Diferentes estilos</div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Box Sizing</h3>
+                <div class="box-model-ejemplo box-sizing-ejemplo">
+                    <div class="caja caja-content-box">Content-Box</div>
+                    <div class="caja caja-border-box">Border-Box</div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Box Shadow</h3>
+                <div class="box-model-ejemplo box-shadow-ejemplo">
+                    <div class="caja caja-shadow-simple">Sombra simple</div>
+                    <div class="caja caja-shadow-difuminada">Sombra difuminada</div>
+                    <div class="caja caja-shadow-multiple">Múltiples sombras</div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Outline</h3>
+                <div class="box-model-ejemplo outline-ejemplo">
+                    <div class="caja caja-outline">Outline</div>
+                    <div class="caja caja-outline-offset">Outline con offset</div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Sección 4: Listas -->
+        <section id="listas" class="seccion">
+            <h2>4. Propiedades para Listas</h2>
+            
+            <article class="ejemplo">
+                <h3>List Style Type</h3>
+                <div class="listas-container">
+                    <div>
+                        <h4>Lista no ordenada</h4>
+                        <ul class="list-style-disc">
+                            <li>Elemento 1</li>
+                            <li>Elemento 2</li>
+                            <li>Elemento 3</li>
+                        </ul>
+                        <ul class="list-style-circle">
+                            <li>Elemento 1</li>
+                            <li>Elemento 2</li>
+                            <li>Elemento 3</li>
+                        </ul>
+                        <ul class="list-style-square">
+                            <li>Elemento 1</li>
+                            <li>Elemento 2</li>
+                            <li>Elemento 3</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4>Lista ordenada</h4>
+                        <ol class="list-style-decimal">
+                            <li>Elemento 1</li>
+                            <li>Elemento 2</li>
+                            <li>Elemento 3</li>
+                        </ol>
+                        <ol class="list-style-upper-roman">
+                            <li>Elemento 1</li>
+                            <li>Elemento 2</li>
+                            <li>Elemento 3</li>
+                        </ol>
+                        <ol class="list-style-lower-alpha">
+                            <li>Elemento 1</li>
+                            <li>Elemento 2</li>
+                            <li>Elemento 3</li>
+                        </ol>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>List Style Position</h3>
+                <div class="listas-container">
+                    <div>
+                        <h4>Inside</h4>
+                        <ul class="list-position-inside">
+                            <li>Elemento con marcador dentro del flujo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                            <li>Segundo elemento</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Outside</h4>
+                        <ul class="list-position-outside">
+                            <li>Elemento con marcador fuera del flujo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                            <li>Segundo elemento</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>List Style Image</h3>
+                <ul class="list-style-image">
+                    <li>Elemento con imagen personalizada</li>
+                    <li>Segundo elemento</li>
+                    <li>Tercer elemento</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Sección 5: Tablas -->
+        <section id="tablas" class="seccion">
+            <h2>5. Propiedades para Tablas</h2>
+            
+            <article class="ejemplo">
+                <h3>Border Collapse</h3>
+                <div class="tablas-container">
+                    <div>
+                        <h4>Separate (por defecto)</h4>
+                        <table class="border-collapse-separate">
+                            <tr>
+                                <th>Encabezado 1</th>
+                                <th>Encabezado 2</th>
+                            </tr>
+                            <tr>
+                                <td>Dato 1</td>
+                                <td>Dato 2</td>
+                            </tr>
+                            <tr>
+                                <td>Dato 3</td>
+                                <td>Dato 4</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <h4>Collapse</h4>
+                        <table class="border-collapse-collapse">
+                            <tr>
+                                <th>Encabezado 1</th>
+                                <th>Encabezado 2</th>
+                            </tr>
+                            <tr>
+                                <td>Dato 1</td>
+                                <td>Dato 2</td>
+                            </tr>
+                            <tr>
+                                <td>Dato 3</td>
+                                <td>Dato 4</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Border Spacing</h3>
+                <table class="border-spacing-ejemplo">
+                    <tr>
+                        <th>Encabezado 1</th>
+                        <th>Encabezado 2</th>
+                    </tr>
+                    <tr>
+                        <td>Dato 1</td>
+                        <td>Dato 2</td>
+                    </tr>
+                    <tr>
+                        <td>Dato 3</td>
+                        <td>Dato 4</td>
+                    </tr>
+                </table>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Empty Cells</h3>
+                <table class="empty-cells-ejemplo">
+                    <tr>
+                        <th>Encabezado 1</th>
+                        <th>Encabezado 2</th>
+                    </tr>
+                    <tr>
+                        <td>Dato 1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Dato 4</td>
+                    </tr>
+                </table>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Table Layout</h3>
+                <div class="tablas-container">
+                    <div>
+                        <h4>Auto (por defecto)</h4>
+                        <table class="table-layout-auto">
+                            <tr>
+                                <th>Encabezado largo</th>
+                                <th>Otro encabezado</th>
+                            </tr>
+                            <tr>
+                                <td>Contenido de la celda</td>
+                                <td>Más contenido</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <h4>Fixed</h4>
+                        <table class="table-layout-fixed">
+                            <tr>
+                                <th>Encabezado largo</th>
+                                <th>Otro encabezado</th>
+                            </tr>
+                            <tr>
+                                <td>Contenido de la celda</td>
+                                <td>Más contenido</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Colores y efectos</h3>
+                <table class="tabla-estilizada">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Laptop</td>
+                            <td>$1200</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>Teléfono</td>
+                            <td>$800</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Tablet</td>
+                            <td>$450</td>
+                            <td>12</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Total</td>
+                            <td>57</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </article>
+        </section>
+
+        <!-- Sección 6: Flexbox -->
+        <section id="flexbox" class="seccion">
+            <h2>6. Flexbox</h2>
+            
+            <article class="ejemplo">
+                <h3>Flex Direction</h3>
+                <div class="flex-container flex-direction-row">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+                <div class="flex-container flex-direction-row-reverse">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+                <div class="flex-container flex-direction-column">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+                <div class="flex-container flex-direction-column-reverse">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Flex Wrap</h3>
+                <div class="flex-container flex-wrap-nowrap">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                    <div class="flex-item">5</div>
+                    <div class="flex-item">6</div>
+                </div>
+                <div class="flex-container flex-wrap-wrap">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                    <div class="flex-item">5</div>
+                    <div class="flex-item">6</div>
+                </div>
+                <div class="flex-container flex-wrap-wrap-reverse">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                    <div class="flex-item">5</div>
+                    <div class="flex-item">6</div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Justify Content</h3>
+                <div class="flex-container justify-content-flex-start">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+                <div class="flex-container justify-content-flex-end">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+                <div class="flex-container justify-content-center">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+                <div class="flex-container justify-content-space-between">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+                <div class="flex-container justify-content-space-around">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Align Items</h3>
+                <div class="flex-container align-items-stretch">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2<br>Segunda línea</div>
+                    <div class="flex-item">3<br>Otra<br>Línea</div>
+                </div>
+                <div class="flex-container align-items-flex-start">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2<br>Segunda línea</div>
+                    <div class="flex-item">3<br>Otra<br>Línea</div>
+                </div>
+                <div class="flex-container align-items-flex-end">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2<br>Segunda línea</div>
+                    <div class="flex-item">3<br>Otra<br>Línea</div>
+                </div>
+                <div class="flex-container align-items-center">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2<br>Segunda línea</div>
+                    <div class="flex-item">3<br>Otra<br>Línea</div>
+                </div>
+                <div class="flex-container align-items-baseline">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2<br>Segunda línea</div>
+                    <div class="flex-item">3<br>Otra<br>Línea</div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Align Content</h3>
+                <div class="flex-container flex-wrap-wrap align-content-flex-start alto-fijo">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                    <div class="flex-item">5</div>
+                    <div class="flex-item">6</div>
+                </div>
+                <div class="flex-container flex-wrap-wrap align-content-flex-end alto-fijo">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                    <div class="flex-item">5</div>
+                    <div class="flex-item">6</div>
+                </div>
+                <div class="flex-container flex-wrap-wrap align-content-center alto-fijo">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                    <div class="flex-item">5</div>
+                    <div class="flex-item">6</div>
+                </div>
+                <div class="flex-container flex-wrap-wrap align-content-space-between alto-fijo">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                    <div class="flex-item">5</div>
+                    <div class="flex-item">6</div>
+                </div>
+                <div class="flex-container flex-wrap-wrap align-content-space-around alto-fijo">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                    <div class="flex-item">5</div>
+                    <div class="flex-item">6</div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Propiedades de items flex</h3>
+                <div class="flex-container">
+                    <div class="flex-item flex-grow-1">flex-grow: 1</div>
+                    <div class="flex-item flex-grow-2">flex-grow: 2</div>
+                </div>
+                <div class="flex-container">
+                    <div class="flex-item flex-shrink-1">flex-shrink: 1</div>
+                    <div class="flex-item flex-shrink-0">flex-shrink: 0</div>
+                    <div class="flex-item flex-shrink-1">flex-shrink: 1</div>
+                </div>
+                <div class="flex-container">
+                    <div class="flex-item flex-basis-100">flex-basis: 100px</div>
+                    <div class="flex-item flex-basis-200">flex-basis: 200px</div>
+                </div>
+                <div class="flex-container">
+                    <div class="flex-item align-self-flex-start">align-self: flex-start</div>
+                    <div class="flex-item">Item normal</div>
+                    <div class="flex-item align-self-flex-end">align-self: flex-end</div>
+                    <div class="flex-item">Item normal</div>
+                    <div class="flex-item align-self-center">align-self: center</div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Sección 7: Grid -->
+        <section id="grid" class="seccion">
+            <h2>7. Grid</h2>
+            
+            <article class="ejemplo">
+                <h3>Grid Template Columns</h3>
+                <div class="grid-container grid-template-columns-fixed">
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">2</div>
+                    <div class="grid-item">3</div>
+                    <div class="grid-item">4</div>
+                    <div class="grid-item">5</div>
+                    <div class="grid-item">6</div>
+                </div>
+                
+                <div class="grid-container grid-template-columns-flexible">
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">2</div>
+                    <div class="grid-item">3</div>
+                    <div class="grid-item">4</div>
+                    <div class="grid-item">5</div>
+                    <div class="grid-item">6</div>
+                </div>
+                
+                <div class="grid-container grid-template-columns-repeat">
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">2</div>
+                    <div class="grid-item">3</div>
+                    <div class="grid-item">4</div>
+                    <div class="grid-item">5</div>
+                    <div class="grid-item">6</div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Grid Template Rows</h3>
+                <div class="grid-container grid-template-rows-fixed">
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">2</div>
+                    <div class="grid-item">3</div>
+                    <div class="grid-item">4</div>
+                    <div class="grid-item">5</div>
+                    <div class="grid-item">6</div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Grid Gap</h3>
+                <div class="grid-container grid-gap-ejemplo">
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">2</div>
+                    <div class="grid-item">3</div>
+                    <div class="grid-item">4</div>
+                    <div class="grid-item">5</div>
+                    <div class="grid-item">6</div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Grid Areas</h3>
+                <div class="grid-container grid-areas-ejemplo">
+                    <div class="grid-item header">Header</div>
+                    <div class="grid-item sidebar">Sidebar</div>
+                    <div class="grid-item main">Main Content</div>
+                    <div class="grid-item footer">Footer</div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Alineación en Grid</h3>
+                <div class="grid-container grid-alignment-ejemplo">
+                    <div class="grid-item item1">1</div>
+                    <div class="grid-item item2">2</div>
+                    <div class="grid-item item3">3</div>
+                    <div class="grid-item item4">4</div>
+                    <div class="grid-item item5">5</div>
+                    <div class="grid-item item6">6</div>
+                </div>
+            </article>
+            
+            <article class="ejemplo">
+                <h3>Grid Implícito</h3>
+                <div class="grid-container grid-implicit-ejemplo">
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">2</div>
+                    <div class="grid-item">3</div>
+                    <div class="grid-item">4</div>
+                    <div class="grid-item">5</div>
+                    <div class="grid-item">6</div>
+                    <div class="grid-item">7</div>
+                    <div class="grid-item">8</div>
+                    <div class="grid-item">9</div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer-principal">
+        <p>© 2023 Guía Completa de CSS - Ejemplos prácticos</p>
+        <p>Creado para fines educativos</p>
+    </footer>
+</body>
+</html>
