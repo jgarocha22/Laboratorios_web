@@ -1,0 +1,30 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color:rgb(255, 255, 255);
+    padding-bottom: 50px;
+}
+
+/* Header */
+.header-principal {
+    background: linear-gradient(10deg,#2c3e50,#3498db);
+    Color: white;
+    padding: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.header-principal h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin-buttom: 1rem;
+    text-shadow: 3px 3px 1px rgba(0,0,0,0.3);
+}
