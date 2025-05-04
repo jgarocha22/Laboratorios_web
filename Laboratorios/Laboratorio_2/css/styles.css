@@ -33,7 +33,7 @@ body.dark-mode {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Estilo de botón */
+/* Estilo de botón de modo oscuro*/
 
 .theme-button {
     position: fixed;
@@ -57,6 +57,8 @@ body.dark-mode {
 .theme-button:active {
     transform: scale(0.95);
 }
+
+/* Estilo de boton chat */
 
 .chat-button {
     position: fixed;
@@ -484,18 +486,18 @@ body.dark-mode {
     font-size: 0.9rem;
 }
 
+.tabla-usuarios img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
 .tabla-usuarios th {
     background-color: #6c63ff;
     color: white;
     font-weight: bold;
-}
-
-.tabla-usuarios caption {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    text-align: left;
-    font-size: 1.2rem;
-    color: #6c63ff;
 }
 
 /*----------------------*/
