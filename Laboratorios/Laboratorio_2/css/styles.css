@@ -223,6 +223,10 @@ body.dark-mode {
     font-size: 120%;
 }
 
+.articulo p {
+    margin: 1.2rem;
+}
+
 .articulo img {
     display: block;
     margin: 0 auto;
@@ -252,10 +256,6 @@ body.dark-mode {
     margin-left: 2rem;
     margin-bottom: 1rem;
     list-style-position: inside;
-}
-
-.articulo p {
-    margin: 1.2rem;
 }
 
 /*----------------------*/
@@ -324,9 +324,6 @@ body.dark-mode {
     border-radius: 4px;
     font-size: 1rem;
     font-family: 'Roboto', sans-serif;
-}
-
-.contacto textarea {
     resize: none;
 }
 
