@@ -3,61 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
     <title>Mi Revista Digital</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header-principal">
+    <header id="header" class="header-principal">
         <h1><u>Mi Revista Digital</u></h1>
         <p class="subtitulo">Una revista sobre juegos y tecnología</p>
     </header>
 
-    <nav>
-        <hr>
+    <nav class="menu-principal">
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#noticias">Noticias</a></li>
+            <li><a href="#header">Inicio</a></li>
+            <li><a href="#ultimas noticias">Noticias</a></li>
             <li><a href="#blog">Blog</a></li>
             <li><a href="configuracion.html">Configuración</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <button id="toggle-theme" class="theme-button">Modo Oscuro</button>
         </ul>
-        <hr>
     </nav>
 
-    <main>
-        <article>
+    <!-- Botón de chat -->
+    <button class="chat-button">
+        <img src="img/mensaje.png" alt="Icono de mensaje" class="chat-icon" width="20" height="20">
+        Chat
+    </button>
 
-            <!-- Sección de lista top 3 temas populares-->
-            <section id="popular">
-                <h2><u>Temas más populares</u></h2>
-                <ol>
-                    <li>Rumores de Playstation 6</li>
-                    <li>Hollow Knight: Silksong</li>
-                    <li>GTA 6</li>
-                </ol>
-            </section>
+    <main class="contenido-principal">
+        <div class="layout">
 
             <!-- Sección de últimas noticias -->
-            <section id="ultimas noticias">
+            <section id="ultimas noticias" class="noticias">
                 <h2><u>Últimas noticias</u></h2>
                 
                 <!-- Sección artículo 1 -->
-                <section id="articulo 1">
-                    <h2>Nintendo Switch 2</h2>
+                <section class="articulo">
+                    <h3><strong>Nintendo Switch 2</strong></h3>
                     <img src="img/switch2.pg.jpeg" alt="Consola Switch 2" width="500">
                     <figcaption><b>Imágen de la consola Switch 2</b></figcaption>
                     <p>
                         Después de meses de conjeturas que nos han tenido pendientes de los anuncios de Nintendo desde que la compañía 
                         afirmó el pasado 16 de enero que la consola se mostraría a principios de 2025, finalmente la fecha se ha revelado 
-                        en un Direct el pasado 2 de abril: la consola llegará a todo el mundo el próximo 5 de junio.
+                        en un Direct el pasado 2 de abril: la consola llegará a todo el mundo el <span class="highlight"> próximo 5 de junio </span>.
                     </p>
 
-                    <h2>¿Cuánto costará?</h2>
+                    <h4>¿Cuánto costará?</h4>
                     <p>
                         La consolá contará con un precio de <b>$449.99 MSRP sin el Mario Kart World incluido</b> y <b>$499.99 MSRP con el bundle de Mario Kart World</b>
                         aunque estos precios pueden variar debido a la subida de los aranceles en Estados Unidos.
                     </p>
 
-                    <h2>Trailer de la Switch 2</h2>
+                    <h4>Trailer de la Switch 2</h4>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/9flte56erE8?si=BC5xVaNVKdW_M02t" 
                             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
                             picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
@@ -65,8 +62,8 @@
                 </section>
 
                 <!-- Sección artículo 2 -->
-                <section id="articulo 2">
-                    <h2><strong>Hollow Knight Silksong</strong></h2>
+                <section class="articulo">
+                    <h3><strong>Hollow Knight Silksong</strong></h3>
                     <img src="img/silksong.jpg" alt="Portada del Hollow Knight Silksong" width="500">
                     <figcaption><b>Portada del Hollow Knight Silksong</b></figcaption>
                     <p>
@@ -100,7 +97,8 @@
                         El mismo Griffin salió hace unos meses <b>para actualizar el estado del desarrollo</b>, ante la falta de noticias sobre Silksong. 
                         Pero finalmente fue el Nintendo Direct el que puso una <b>ventana de lanzamiento más concreta</b> del juego metroidvania.
                     </p>
-
+                    
+                    <h4>Trailer de Silksong</h4>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/yQxwbZsL14Y?si=HrPU5IxBCZOnODJ-" 
                             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
                             encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
@@ -109,30 +107,26 @@
             </section>
 
             <!-- Sección de sobre mí -->
-            <section id="Sobre mi">
-                <hr>
-                <div>
-                    <h2>Sobre mí</h2>
+            <section id="Sobre mi" class="about-me">
+                    <h3 >Sobre mí</h3>
                     <p>Juan Arocha estudiante de la Universidad Católica Andrés Bello (UCAB).</p>
-                </div>
                 <hr>
-                </div>
-                    <h2>Sobre mí</h2>
+                    <h3>Sobre mí</h3>
                     <p>
                         No sé... pero mira un gato 👍
                     </p>
                     <img src="img/gato.jpg" alt="" width="200">
-                </div>
-                <hr>
             </section>
-        </article>
+        </div>
     </main>
 
-    <footer>
-        <address>
-            <h2>Revista Digital<br></h2> <a href="contacto.html">Contacto</a>
+    <footer class="footer-principal">
+        <address id="contacto">
+            <h2>Revista Digital<br></h2> 
+            <h3>Contacto: ejemplo@mirevistadigital.com</h3>
+            <h3>Formulario: <a href="contacto.html">Contacto</a></h3>
         </address>
-        <div>
+        <div class="api-seo">
             <h2>API y SEO</h2>
             <dl>
                 <dt><strong>API</strong></dt>
@@ -144,7 +138,7 @@
                         <cite><a href="https://definicion.de/api/">definición.de</a></cite>
                     </blockquote>
                 </dd>
-
+    
                 <dt><strong>SEO</strong></dt>
                 <dd>
                     <blockquote>
