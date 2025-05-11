@@ -1,0 +1,210 @@
+/*ejemplo de modelo de cajas*/
+.caja {
+    /* Espaciado interno */
+    padding: 20px;
+    
+    /* Margen exterior */
+    margin: 15px;
+    
+    /* Borde con estilo */
+    border: 2px solid #333;
+    
+    /* Ancho total incluyendo padding y border */
+    box-sizing: border-box;
+    
+    /* Color de fondo para visualizar mejor */
+    background-color: #f0f0f0;
+}
+
+/*ejemplo de display*/
+.bloque {
+    /* Ocupa todo el ancho disponible */
+    display: block;
+    background: #ffcccc;
+}
+
+.inline {
+    /* Se comporta como texto */
+    display: inline;
+    background: #ccffcc;
+}
+
+.inline-block {
+    /* Combina propiedades de inline y block */
+    display: inline-block;
+    width: 100px;
+    background: #cccfff;
+}
+
+/*ejemplo de flex*/
+.flex-container {
+    /* Activar flexbox */
+    display: flex;
+    
+    /* Distribuir elementos horizontalmente */
+    justify-content: space-between;
+    
+    /* Alinear elementos verticalmente */
+    align-items: center;
+    
+    height: 200px;
+    background: #f0f0f0;
+}
+
+.flex-item {
+    /* Tamaño base de los elementos */
+    flex: 1;
+    margin: 5px;
+    padding: 20px;
+    background: #3498db;
+    color: white;
+    text-align: center;
+}
+
+/*ejemplo de grid*/
+.grid-container {
+    /* Activar grid */
+    display: grid;
+    
+    /* Definir columnas */
+    grid-template-columns: repeat(2, 1fr);
+
+    /* Definir filas */
+    grid-template-rows: 100px 200px;
+    
+    /* Espacio entre elementos */
+    gap: 10px;
+    
+    padding: 10px;
+    background: #f0f0f0;
+}
+
+.grid-item {
+    padding: 20px;
+    background: #e74c3c;
+    color: white;
+    text-align: center;
+}
+
+/*ejemplo de z-index*/
+.z-index-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.capa1, .capa2, .capa3 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.capa1 {
+    /* Capa más al fondo */
+    background: red;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+.capa2 {
+    /* Capa intermedia */
+    background: green;
+    left: 50px;
+    top: 50px;
+    z-index: 2;
+}
+
+.capa3 {
+    /* Capa superior */
+    background: blue;
+    left: 100px;
+    top: 100px;
+    z-index: 3;
+}
+
+/*ejemplo de variables*/
+:root {
+    /* Definición de variables globales */
+    --color-primario: #3498db;
+    --color-secundario: #e74c3c;
+    --espaciado-base: 20px;
+}
+
+.elemento {
+    /* Uso de variables */
+    background: var(--color-primario);
+    padding: var(--espaciado-base);
+    margin: calc(var(--espaciado-base) * 2);
+}
+
+/*ejemplo de transformaciones*/
+.transformacion {
+    margin: 30px;
+    width: 40px;
+    height: 40px;
+    /* Rotación y escala */
+    transform: rotate(45deg) scale(1.2);
+    
+    /* Transición suave */
+    transition: transform 0.3s ease;
+    
+    background: #9b59b6;
+    padding: 20px;
+}
+
+.transformacion:hover {
+    /* Cambio al pasar el mouse */
+    transform: rotate(0deg) scale(1.5);
+}
+
+/*ejemplo de transiciones*/
+.transicion {
+    margin: 30px;
+    background: #2ecc71;
+    padding: 20px;
+    
+    /* Definir transición */
+    transition: all 0.3s ease-in-out;
+}
+
+.transicion:hover {
+    background: #27ae60;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+
+
+/* Definir la animación */
+@keyframes rebote {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+}
+
+.animacion {
+    /* Aplicar animación */
+    margin: 30px;
+    animation: rebote 1s infinite;
+    background: #f1c40f;
+    width: 100px;
+    height: 100px;
+}
+
+/*ejemplo de calc, min, max, clamp*/
+.matematicas {
+    /* Calcular dimensiones */
+    width: calc(100% - 40px);
+    
+    /* Usar min/max */
+    height: min(300px, 50vh);
+    
+    /* Usar clamp para valores responsivos */
+    font-size: clamp(16px, 5vw, 32px);
+    
+    /* Convertir unidades */
+    padding: calc(1rem + 10px);
+}
+
+
