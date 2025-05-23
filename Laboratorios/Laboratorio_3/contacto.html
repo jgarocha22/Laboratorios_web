@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header" class="header-principal">
+        <h1><u>Contacto</u></h1>
+        <p class="subtitulo">Contáctanos para cualquier consulta</p>
+    </header>
+
+    <nav class="menu-principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#ultimas noticias">Noticias</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="configuracion.html">Configuración</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <button id="toggle-theme" class="theme-button">Modo Oscuro</button>
+        </ul>
+    </nav>
+
+    <!-- Botón de chat -->
+    <button class="chat-button">
+        <img src="img/mensaje.png" alt="Icono de mensaje" class="chat-icon" width="20" height="20">
+        Chat
+    </button>
+
+    <!-- Seccion de Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Formulario de Contacto</h2>
+
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Datos personales</legend>
+    
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Pablito Zamora" required>
+                
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com" required>
+            </fieldset>
+    
+            <fieldset>
+                <legend>Tema del mensaje</legend>
+                
+                <label><input type="radio" name="tema" value="Comentario"> Consulta</label>
+                <label><input type="radio" name="tema" value="soporte"> Soporte<br></label>
+ 
+                <textarea name="mensaje" id="mensajes" rows="6" placeholder="Escribe tu mensaje..."></textarea>
+            </fieldset>
+
+            <!-- Botones -->
+            <div style="margin-top: 20px;">
+                <button type="submit" onclick="alert('Mensaje enviado exitosamente')">Enviar</button>
+                <button type="reset">Limpiar</button>
+                <button type="button" onclick="window.location.href='index.html';">Volver</button>
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer-principal">
+        <address id="contacto">
+            <h2>Revista Digital<br></h2> 
+            <h3>Contacto: ejemplo@mirevistadigital.com</h3>
+            <h3>Formulario: <a href="contacto.html">Contacto</a></h3>
+        </address>
+        <div class="api-seo">
+            <h2>API y SEO</h2>
+            <dl>
+                <dt><strong>API</strong></dt>
+                <dd>
+                    <blockquote>
+                        "Podemos entender la API como un código que indica a las aplicaciones, cómo pueden<br> 
+                        mantener una comunicación entre sí. Estas reglas permiten que los distintos<br> 
+                        programas mantengan interacciones."<br>
+                        <cite><a href="https://definicion.de/api/">definición.de</a></cite>
+                    </blockquote>
+                </dd>
+    
+                <dt><strong>SEO</strong></dt>
+                <dd>
+                    <blockquote>
+                        "SEO es una sigla que procede de la expresión inglesa Search Engine Optimization.<br>
+                        Se trata de la técnica que consiste en optimizar un sitio web para que alcance<br>
+                        el mejor posicionamiento posible en los buscadores de Internet."<br>
+                        <cite><a href="https://definicion.de/seo/">definición.de</a></cite>
+                    </blockquote>
+                </dd>
+            </dl>
+        </div>
+    </footer>
+
+</body>
+</html>
