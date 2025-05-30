@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <input type="checkbox" id="theme-toggle" class="theme-checkbox">
     <header id="header" class="header-principal">
         <h1><u>Mi Revista Digital</u></h1>
         <p class="subtitulo">Una revista sobre juegos y tecnología</p>
@@ -16,16 +17,13 @@
     <nav class="menu-principal">
         <ul>
             <li><a href="#header">Inicio</a></li>
-            <li><a href="#ultimas noticias">Noticias</a></li>
+            <li><a href="#ultimas-noticias">Noticias</a></li>
             <li><a href="#blog">Blog</a></li>
             <li><a href="configuracion.html">Configuración</a></li>
             <li><a href="#contacto">Contacto</a></li>
-            <button id="toggle-theme" class="theme-button">
-                <img src="img/White-Mode.png" alt="White-Mode-icon">
-            </button>
-            <button id="user" class="user-button">
-                <img src="img/User-icon.png" alt="User-icon">
-            </button>
+            <label for="theme-toggle" class="theme-button">
+                <img src="img/Light-Mode.png" alt="Theme-Mode-icon">
+            </label>
         </ul>
     </nav>
 
@@ -127,7 +125,7 @@
 
     <footer class="footer-principal">
         <address id="contacto">
-            <h2>Revista Digital<br></h2> 
+            <h2>Revista Digital</h2> 
             <h3>Contacto: example@mirevistadigital.com</h3>
             <h3>Formulario: <a href="contacto.html">Contacto</a></h3>
         </address>

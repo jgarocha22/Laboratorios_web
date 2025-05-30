@@ -27,7 +27,7 @@ html {
     --chat-text-color: white;
     --chat-hover-bg: rgba(255, 255, 255, 0.2);
 
-        /* Colores de los botones config y contacto */
+    /* Colores de los botones config y contacto */
     --button-primary-bg: #6c63ff;
     --button-primary-hover-bg: #574bff;
     --button-secondary-bg: #ccc;
@@ -36,6 +36,15 @@ html {
     --button-volver-hover-bg: #d10c4e;
     --button-text-color: white;
     --button-secondary-text-color: #333;
+
+    /* Colores de body Claro */
+    --body-bg-color: rgb(255, 255, 255);
+    --body-text-color: #333;
+    --body-link-color: #6c63ff;
+
+    /* Colores de body Oscuro */
+    --body-bg-color-dark: #121212;
+    --body-text-color-dark: white;
 }
 
 /* Estilo por defecto (modo claro) */
@@ -43,36 +52,79 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color:rgb(255, 255, 255);
-    color: #333;
+    background-color: var(--body-bg-color);
+    color: var(--body-text-color);
     padding-bottom: 0px;
     transition: background-color 0.3s, color 0.3s;
 }
 
 /* Modo oscuro */
 
-body.dark-mode {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: #121212;
-    color: white;
-    padding-bottom: 50px;
-    transition: background-color 0.3s, color 0.3s;
+.theme-checkbox:checked ~ body,
+body:has(.theme-checkbox:checked) {
+    background-color: var(--body-bg-color-dark);
+    color: var(--body-text-color-dark);
 }
 
-/* Estilo de botón de modo oscuro*/
+.theme-checkbox:checked ~ body .articulo,
+body:has(.theme-checkbox:checked) .articulo {
+    background-color: var(--body-bg-color-dark);
+    color: var(--body-text-color-dark);
+    box-shadow: 0 2px 10px rgba(87, 87, 87, 0.5);
+}
+
+.theme-checkbox:checked ~ body .about-me,
+body:has(.theme-checkbox:checked) .about-me {
+    background-color: var(--body-bg-color-dark);
+    color: var(--body-text-color-dark);
+    box-shadow: 0 2px 10px rgba(87, 87, 87, 0.5);
+}
+
+.theme-checkbox:checked ~ body .noticias h2,
+body:has(.theme-checkbox:checked) .noticias h2 {
+    color: #2db8bd;
+    border-bottom-color: #2db8bd;
+}
+
+.theme-checkbox:checked ~ body .articulo h3,
+body:has(.theme-checkbox:checked) .articulo h3 {
+    color: #2db8bd;
+    border-bottom-color: #2db8bd;
+}
+
+.theme-checkbox:checked ~ body .articulo h4,
+body:has(.theme-checkbox:checked) .articulo h4 {
+    color: #2db8bd;
+}
+
+.theme-checkbox:checked ~ body .highlight,
+body:has(.theme-checkbox:checked) .highlight {
+    background-color: rgba(45, 184, 189, 0.2);
+    color: var(--body-text-color-dark);
+}
+
+.theme-checkbox:checked ~ body .chat-button,
+body:has(.theme-checkbox:checked) .chat-button {
+    box-shadow: 0 4px 6px rgba(87, 87, 87, 0.8);
+}
+
+/* Estilo de botón de modo oscuro */
+
+.theme-checkbox {
+    display: none;
+}
 
 .theme-button {
-    position: fixed;
-    right: 4rem;
-    padding: 0rem 1rem;
+    position: relative;
+    right: 0;
+    padding: 0.5rem;
     background: transparent;
-    color: white;
     border: none;
-    border-radius: 4dvh;
+    border-radius: 2dvh;
     cursor: pointer;
-    font-weight: bold;
     transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
 }
 
 .theme-button:hover {
@@ -87,35 +139,13 @@ body.dark-mode {
 .theme-button img {
     height: 2.5dvh;
     width: 2.5dvh;
+    content: url('../img/Light-Mode.png');
+    transition: content 0.3s ease;
 }
 
-.user-button {
-    position: fixed;
-    right: 0rem;
-    padding: 0rem 1rem;
-    background: transparent;
-    color: white;
-    border: none;
-    border-radius: 2dvh;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s;
+#theme-toggle:checked ~ .menu-principal .theme-button img {
+    content: url('../img/Dark-Mode.png');
 }
-
-.user-button:hover {
-    background-color: var(--chat-hover-bg);
-    transform: scale(1.2);
-}
-
-.user-button:active {
-    transform: scale(0.95);
-}
-
-.user-button img {
-    height: 2.5dvh;
-    width: 2.5dvh;
-}
-
 
 /* Estilo de boton chat */
 
@@ -152,60 +182,135 @@ body.dark-mode {
 /*    Responsive        */
 /*----------------------*/
 
-@media (max-width: 900px) {
-    .contenido-principal,
-    .configuracion,
-    .contacto form {
-        max-width: 98vw;
-        padding: 1rem 0.5rem;
-    }
-
-    .layout {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .footer-principal {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem 0.5rem;
-    }
-
-    .footer-principal address,
-    .footer-principal .api-seo {
-        margin-left: 0;
-        text-align: left;
-    }
-}
-
-@media (max-width: 600px) {
+/* Tablets y pantallas medianas (768px y menos) */
+@media screen and (max-width: 768px) {
     .header-principal h1 {
         font-size: 2rem;
     }
 
     .menu-principal ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .layout {
         flex-direction: column;
-        gap: 0.5rem;
-        padding: 0;
     }
 
-    .articulo,
     .about-me {
-        padding: 1rem 0.5rem;
+        width: 100%;
+        margin-bottom: 2rem;
     }
 
-    .tabla-usuarios img {
-        width: 60px;
-        height: 60px;
+    .articulo img {
+        width: 100%;
     }
 
     .footer-principal {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-principal address,
+    .footer-principal .api-seo {
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    .chat-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Móviles (480px y menos) */
+@media screen and (max-width: 480px) {
+    .header-principal h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitulo {
         font-size: 0.9rem;
     }
 
-    .configuracion,
-    .contacto form {
+    .menu-principal {
         padding: 0.5rem;
+    }
+
+    .menu-principal ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-principal li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-principal a {
+        display: block;
+        padding: 0.8rem;
+    }
+
+    .contenido-principal {
+        padding: 0 1rem;
+    }
+
+    .articulo {
+        padding: 1rem;
+    }
+
+    .articulo h3 {
+        font-size: 120%;
+    }
+
+    .articulo h4 {
+        font-size: 110%;
+    }
+
+    .footer-principal {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .chat-button {
+        bottom: 0.5rem;
+        right: 0.5rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .theme-button {
+        position: relative;
+        right: 0;
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (320px y menos) */
+@media screen and (max-width: 320px) {
+    .header-principal h1 {
+        font-size: 1.2rem;
+    }
+
+    .menu-principal a {
+        font-size: 0.9rem;
+    }
+
+    .articulo {
+        margin-bottom: 2rem;
+    }
+
+    .chat-button {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.7rem;
     }
 }
 
@@ -227,33 +332,6 @@ body.dark-mode {
     text-shadow: 3px 3px 1px rgba(0,0,0,0.3);
         -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-@-webkit-keyframes focus-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
-}
-@keyframes focus-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
 }
 
 .subtitulo {
@@ -280,10 +358,11 @@ body.dark-mode {
 .menu-principal ul {
     display: flex;
     justify-content: center;
+    align-items: center;
     list-style-type: none;
     gap: 2rem;
-        -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .menu-principal a {
@@ -434,7 +513,7 @@ body.dark-mode {
     background-color: #f9f9f9;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     align-self: flex-start;
     max-height: 450px;
 }
