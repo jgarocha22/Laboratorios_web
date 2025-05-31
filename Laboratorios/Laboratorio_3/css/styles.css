@@ -529,7 +529,7 @@ body:has(.theme-checkbox:checked) .chat-button {
     color: #1e777a;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid #2db8bd;
 }
 
 .articulo {
@@ -635,7 +635,7 @@ body:has(.theme-checkbox:checked) .chat-button {
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .contacto h2 {
@@ -718,7 +718,7 @@ body:has(.theme-checkbox:checked) .chat-button {
     padding: 1rem;
     background-color: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .configuracion h2 {
