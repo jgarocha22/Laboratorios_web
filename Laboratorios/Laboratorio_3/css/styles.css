@@ -252,7 +252,6 @@ body:has(.theme-checkbox:checked) .chat-button {
 
     .menu-principal {
         padding: 0.5rem;
-        position: -webkit-sticky;
         position: sticky;
         top: 0;
         z-index: 1000;
@@ -473,7 +472,6 @@ body:has(.theme-checkbox:checked) .chat-button {
     }
 
     .menu-principal {
-        position: -webkit-sticky;
         position: sticky;
         top: 0;
         padding: 0.8rem;
