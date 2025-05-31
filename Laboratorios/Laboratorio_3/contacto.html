@@ -9,23 +9,28 @@
 </head>
 <body>
     <input type="checkbox" id="theme-toggle" class="theme-checkbox">
+    
     <header id="header" class="header-principal">
         <h1><u>Contacto</u></h1>
         <p class="subtitulo">Contáctanos para cualquier consulta</p>
     </header>
 
     <nav class="menu-principal">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="index.html#ultimas noticias">Noticias</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="configuracion.html">Configuración</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <input type="checkbox" id="theme-toggle" class="theme-checkbox">
-            <label for="theme-toggle" class="theme-button">
-                <img src="img/Light-Mode.png" alt="Theme-Mode-icon">
-            </label>
-        </ul>
+        <button class="navbar-toggler">
+            <span class="navbar-toggler-icon">☰</span>
+        </button>
+        <div class="navbar-collapse">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#ultimas noticias">Noticias</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="configuracion.html">Configuración</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <label for="theme-toggle" class="theme-button">
+                    <img src="img/Light-Mode.png" alt="Theme-Mode-icon">
+                </label>
+            </ul>
+        </div>
     </nav>
 
     <!-- Botón de chat -->
@@ -52,15 +57,15 @@
             <fieldset>
                 <legend>Tema del mensaje</legend>
                 
-                <label><input type="radio" name="tema" value="Comentario"> Consulta</label>
-                <label><input type="radio" name="tema" value="soporte"> Soporte<br></label>
+                <label><input type="radio" name="tema" id="tema-consulta" value="consulta" checked> Consulta</label>
+                <label><input type="radio" name="tema" id="tema-soporte" value="soporte"> Soporte<br></label>
  
                 <textarea name="mensaje" id="mensajes" rows="6" placeholder="Escribe tu mensaje..."></textarea>
             </fieldset>
 
             <!-- Botones -->
             <div style="margin-top: 20px;">
-                <button type="submit" onclick="alert('Mensaje enviado exitosamente')">Enviar</button>
+                <button type="submit" id="enviar">Enviar</button>
                 <button type="reset">Limpiar</button>
                 <button type="button" onclick="window.location.href='index.html';">Volver</button>
             </div>
@@ -99,5 +104,9 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="js/eventos.js"></script>
+    <script src="js/navbar.js"></script>
+    
 </body>
 </html>

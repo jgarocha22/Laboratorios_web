@@ -9,23 +9,28 @@
 </head>
 <body>
     <input type="checkbox" id="theme-toggle" class="theme-checkbox">
+    
     <header id="header" class="header-principal">
         <h1><u>Configuración</u></h1>
         <p class="subtitulo">Personaliza tu experiencia</p>
     </header>
 
     <nav class="menu-principal">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="index.html#ultimas noticias">Noticias</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="configuracion.html">Configuración</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <input type="checkbox" id="theme-toggle" class="theme-checkbox">
-            <label for="theme-toggle" class="theme-button">
-                <img src="img/Light-Mode.png" alt="Theme-Mode-icon">
-            </label>
-        </ul>
+        <button class="navbar-toggler">
+            <span class="navbar-toggler-icon">☰</span>
+        </button>
+        <div class="navbar-collapse">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#ultimas noticias">Noticias</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="configuracion.html">Configuración</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <label for="theme-toggle" class="theme-button">
+                    <img src="img/Light-Mode.png" alt="Theme-Mode-icon">
+                </label>
+            </ul>
+        </div>
     </nav>
 
     <!-- Botón de chat -->
@@ -181,5 +186,8 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="js/navbar.js"></script>
+    
 </body>
 </html>
