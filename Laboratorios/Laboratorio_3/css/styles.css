@@ -866,6 +866,27 @@ body:has(.theme-checkbox:checked) .chat-button {
     text-align: left;
 }
 
+.footer-principal ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-principal li {
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+.footer-principal li:hover {
+    transform: scale(1.1);
+}
+
+.footer-principal li:active {
+    transform: scale(0.95);
+}
+
 .footer-principal .api-seo {
     flex: 2;
     text-align: left;
