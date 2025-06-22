@@ -593,7 +593,7 @@ body:has(.theme-checkbox:checked) .btn-close {
     gap: 2rem;
 }
 
-.footer-principal address {
+.footer-principal #contacto {
     flex: 1;
     text-align: left;
 }
