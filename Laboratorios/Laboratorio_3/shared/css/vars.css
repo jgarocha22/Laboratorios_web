@@ -32,4 +32,22 @@
     /* Colores de body Oscuro */
     --body-bg-color-dark: #121212;
     --body-text-color-dark: white;
+    
+    /* Colores del formulario en modo oscuro */
+    --form-bg-dark: #1e1e1e;
+    --form-border-dark: #444;
+    --input-bg-dark: #2a2a2a;
+    --input-border-dark: #555;
+    --input-focus-border-dark: #2db8bd;
+    --input-focus-shadow-dark: rgba(45, 184, 189, 0.25);
+    --legend-color-dark: #2db8bd;
+    --radio-accent-dark: #2db8bd;
+    
+    /* Colores de configuración en modo oscuro */
+    --config-bg-dark: #1e1e1e;
+    --table-header-bg-dark: #2a2a2a;
+    --table-row-even-bg-dark: #2a2a2a;
+    --table-row-hover-bg-dark: #3a3a3a;
+    --table-border-dark: #444;
+    --table-text-dark: var(--body-text-color-dark);
 }

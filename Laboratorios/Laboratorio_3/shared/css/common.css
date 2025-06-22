@@ -25,7 +25,9 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Modo oscuro */
+/*----------------------*/
+/*  Modo Oscuro General */
+/*----------------------*/
 .theme-checkbox:checked ~ body,
 body:has(.theme-checkbox:checked) {
     background-color: var(--body-bg-color-dark);
@@ -72,6 +74,48 @@ body:has(.theme-checkbox:checked) .chat-button {
     transition: box-shadow 0.3s ease;
 }
 
+/* Modo oscuro para el modal del chat */
+.theme-checkbox:checked ~ body .modal-content,
+body:has(.theme-checkbox:checked) .modal-content {
+    background-color: var(--body-bg-color-dark);
+    color: var(--body-text-color-dark);
+    border-color: var(--form-border-dark);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-checkbox:checked ~ body .modal-header,
+body:has(.theme-checkbox:checked) .modal-header {
+    background-color: var(--form-bg-dark);
+    border-bottom-color: var(--form-border-dark);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-checkbox:checked ~ body .modal-title,
+body:has(.theme-checkbox:checked) .modal-title {
+    color: var(--legend-color-dark);
+    transition: color 0.3s ease;
+}
+
+.theme-checkbox:checked ~ body .modal-body,
+body:has(.theme-checkbox:checked) .modal-body {
+    background-color: var(--body-bg-color-dark);
+    color: var(--body-text-color-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-checkbox:checked ~ body .modal-footer,
+body:has(.theme-checkbox:checked) .modal-footer {
+    background-color: var(--form-bg-dark);
+    border-top-color: var(--form-border-dark);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-checkbox:checked ~ body .btn-close,
+body:has(.theme-checkbox:checked) .btn-close {
+    filter: invert(1);
+    transition: filter 0.3s ease;
+}
+
 /* Estilo de botón de modo oscuro */
 .theme-checkbox {
     display: none;
@@ -102,12 +146,12 @@ body:has(.theme-checkbox:checked) .chat-button {
 .theme-button img {
     height: 2.5dvh;
     width: 2.5dvh;
-    content: url('/Laboratorios/Laboratorio_3/assets/img/Light-Mode.png');
+    content: url('/Laboratorios/Laboratorio_3/assets/icons/Light-Mode.png');
     transition: content 0.3s ease;
 }
 
-#theme-toggle:checked ~ .menu-principal .theme-button img {
-    content: url('/Laboratorios/Laboratorio_3/assets/img/Dark-Mode.png');
+#theme-toggle:checked ~ .navbar .theme-button img {
+    content: url('/Laboratorios/Laboratorio_3/assets/icons/Dark-Mode.png');
 }
 
 /* Estilo de boton chat */
@@ -510,7 +554,6 @@ body:has(.theme-checkbox:checked) .chat-button {
 
 .articulo li {
     margin-top: 1rem;
-    margin-left: 2rem;
     margin-bottom: 1rem;
     list-style-position: inside;
 }

@@ -63,8 +63,8 @@
     <!-- Seccion de Contacto -->
     <section class="contacto">
         <h2>Formulario de Contacto</h2>
-
-        <form action="#" method="post">
+        <div id="contact-alert"></div>
+        <form id="form-contacto" action="#" method="post">
             <fieldset>
                 <legend>Datos personales</legend>
     
@@ -86,7 +86,7 @@
 
             <!-- Botones -->
             <div style="margin-top: 20px;">
-                <button type="submit" id="enviar" onclick="alert('Mensaje enviado exitosamente')">Enviar</button>
+                <button type="submit" id="enviar">Enviar</button>
                 <button type="reset">Limpiar</button>
                 <button type="button" onclick="window.location.href='index.html';">Volver</button>
             </div>
@@ -132,9 +132,12 @@
         </div>
     </footer>
 
+    <!-- mensaje de éxito -->
+    <div id="custom-mensaje" class="custom-mensaje-success">¡Enviado Exitosamente!</div>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="../../shared/js/eventos.js"></script>
+    <script src="../../shared/js/main.js"></script>
 
 </body>
 </html>
