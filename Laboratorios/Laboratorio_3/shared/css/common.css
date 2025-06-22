@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap');
+@import './vars.css';
+
 /*----------------------*/
 /*  Estilos Generales   */
 /*----------------------*/
@@ -9,42 +12,6 @@
 
 html{
     scroll-behavior: smooth;
-}
-
-:root {
-    /* Colores del header */
-    --header-bg-gradient: linear-gradient(-60deg, #f12e66, #2db8bd, #1a1a1a);
-    --header-text-color: white;
-
-    /* Colores de la navegación */
-    --nav-bg-gradient: linear-gradient(-60deg, #f12e66, #2db8bd, #1a1a1a);
-    --nav-link-color: white;
-    --nav-link-hover-bg: rgba(255, 255, 255, 0.2);
-    --nav-link-active-bg: #142a52;
-
-    /* Colores del botón de chat */
-    --chat-bg-gradient: linear-gradient(-60deg, #f12e66, #2db8bd);
-    --chat-text-color: white;
-    --chat-hover-bg: rgba(255, 255, 255, 0.2);
-
-    /* Colores de los botones config y contacto */
-    --button-primary-bg: #6c63ff;
-    --button-primary-hover-bg: #574bff;
-    --button-secondary-bg: #ccc;
-    --button-secondary-hover-bg: #bbb;
-    --button-volver-bg: #f12e66;
-    --button-volver-hover-bg: #d10c4e;
-    --button-text-color: white;
-    --button-secondary-text-color: #333;
-
-    /* Colores de body Claro */
-    --body-bg-color: rgb(255, 255, 255);
-    --body-text-color: #333;
-    --body-link-color: #6c63ff;
-
-    /* Colores de body Oscuro */
-    --body-bg-color-dark: #121212;
-    --body-text-color-dark: white;
 }
 
 /* Estilo por defecto (modo claro) */
@@ -135,12 +102,12 @@ body:has(.theme-checkbox:checked) .chat-button {
 .theme-button img {
     height: 2.5dvh;
     width: 2.5dvh;
-    content: url('../img/Light-Mode.png');
+    content: url('/Laboratorios/Laboratorio_3/assets/img/Light-Mode.png');
     transition: content 0.3s ease;
 }
 
 #theme-toggle:checked ~ .menu-principal .theme-button img {
-    content: url('../img/Dark-Mode.png');
+    content: url('/Laboratorios/Laboratorio_3/assets/img/Dark-Mode.png');
 }
 
 /* Estilo de boton chat */
@@ -176,6 +143,18 @@ body:has(.theme-checkbox:checked) .chat-button {
 /*    Responsive        */
 /*----------------------*/
 
+/* Centrado del navbar de Bootstrap en móvil */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-collapse .theme-button {
+        margin: 0.5rem auto; /* Centra el botón del tema y le da un margen */
+        display: inline-block; /* Permite que el margen automático funcione correctamente */
+    }
+}
+
 /* Tablets y pantallas medianas (768px y menos) */
 @media screen and (max-width: 768px) {
     .header-principal h1 {
@@ -209,7 +188,7 @@ body:has(.theme-checkbox:checked) .chat-button {
         margin-bottom: 2rem;
     }
 
-    .articulo img {
+    .articulo img, .about-me img {
         width: 100%;
     }
 
@@ -406,101 +385,28 @@ body:has(.theme-checkbox:checked) .chat-button {
 /*      Navegación      */
 /*----------------------*/
 
-.menu-principal {
-    background: var(--nav-bg-gradient);
-    padding: 1rem;
-    margin-bottom: 2rem;
+.navbar {
+    background: var(--nav-bg-gradient) !important;
     position: sticky;
     top: 0;
     z-index: 100;
-    width: 100%;
+    margin-bottom: 3rem;
 }
 
-.navbar-toggler {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0.5rem;
-}
-
-.navbar-toggler-icon {
-    display: inline-block;
-}
-
-.menu-principal ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    gap: 2rem;
-    padding: 0;
-    margin: 0;
-}
-
-.menu-principal a {
-    color: var(--nav-link-color);
-    text-decoration: none;
+.nav-link {
+    color: var(--nav-link-color) !important;
     font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
     transition: background-color 0.3s;
+    border-radius: 4px;
+    padding: 0.5rem 1rem !important;
 }
 
-.menu-principal a:hover {
+.nav-link:hover {
     background-color: var(--nav-link-hover-bg);
 }
 
-@media screen and (max-width: 480px) {
-    .navbar-toggler {
-        display: block;
-    }
-
-    .navbar-collapse {
-        display: none;
-        width: 100%;
-        background: var(--nav-bg-gradient);
-        position: absolute;
-        top: 100%;
-        left: 0;
-    }
-
-    .navbar-collapse.show {
-        display: block;
-    }
-
-    .menu-principal {
-        position: sticky;
-        top: 0;
-        padding: 0.8rem;
-    }
-
-    .menu-principal ul {
-        flex-direction: column;
-        width: 100%;
-        gap: 0;
-    }
-
-    .menu-principal li {
-        width: 100%;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .menu-principal a {
-        display: block;
-        padding: 1rem;
-        text-align: center;
-        width: 100%;
-    }
-
-    .theme-button {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        width: 100%;
-        justify-content: center;
-        padding: 1rem;
-    }
+.navbar-nav {
+    gap: 1rem;
 }
 
 /*----------------------*/
@@ -561,13 +467,18 @@ body:has(.theme-checkbox:checked) .chat-button {
     margin: 1.2rem;
 }
 
-.articulo img {
-    display: block;
-    margin: 0 auto;
-    width: 80%;
+.articulo img, .about-me img {
+    max-width: 100%;
     height: auto;
-    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 8px;
+    object-fit: cover;
+}
+
+.articulo img {
+    width: 80%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
@@ -615,234 +526,12 @@ body:has(.theme-checkbox:checked) .chat-button {
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     align-self: flex-start;
-    max-height: 450px;
+    max-height: 800px;
+    max-width: 500px;
 }
 
-/*----------------------*/
-/*      Contacto        */
-/*----------------------*/
-
-.contacto form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: #333;
-    margin: 2rem auto;
-    max-width: 800px;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.contacto h2 {
-    text-align: center;
-}
-
-.contacto fieldset {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 1rem;
-}
-
-.contacto legend {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #333;
-}
-
-.contacto label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-
-.contacto input[type="text"],
-.contacto input[type="email"],
-.contacto textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
-    resize: none;
-}
-
-.contacto button {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--button-text-color);
-    background-color: var(--button-primary-bg);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contacto button:hover {
-    background-color: var(--button-primary-hover-bg);
-}
-
-.contacto button[type="reset"] {
-    background-color: var(--button-secondary-bg);
-    color: var(--button-secondary-text-color);
-}
-
-.contacto button[type="reset"]:hover {
-    background-color: var(--button-secondary-hover-bg);
-}
-
-.contacto button[type="button"] {
-    background-color: var(--button-volver-bg);
-}
-
-.contacto button[type="button"]:hover {
-    background-color: var(--button-volver-hover-bg);
-}
-
-/*----------------------*/
-/*    Configuración     */
-/*----------------------*/
-
-.configuracion {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: #333;
-    margin: 2rem auto;
-    max-width: 800px;
-    padding: 1rem;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.configuracion h2 {
-    text-align: center;
-}
-
-.configuracion fieldset {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    background-color: #fff;
-}
-
-.configuracion legend {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #6c63ff;
-    margin-bottom: 0.5rem;
-}
-
-.configuracion label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: #333;
-}
-
-.configuracion input[type="text"],
-.configuracion input[type="date"],
-.configuracion input[type="password"],
-.configuracion input[type="file"],
-.configuracion input[type="color"],
-.configuracion select {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
-    background-color: #fff;
-    margin-bottom: 1rem;
-}
-
-.configuracion button {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--button-text-color);
-    background-color: var(--button-primary-bg);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.configuracion button:hover {
-    background-color: var(--button-primary-hover-bg);
-}
-
-.configuracion button[type="reset"] {
-    background-color: var(--button-secondary-bg);
-    color: var(--button-secondary-text-color);
-}
-
-.configuracion button[type="reset"]:hover {
-    background-color: var(--button-secondary-hover-bg);
-}
-
-.configuracion button[type="button"] {
-    background-color: var(--button-volver-bg);
-}
-
-.configuracion button[type="button"]:hover {
-    background-color: var(--button-volver-hover-bg);
-}
-
-.tabla-usuarios {
-    width: 100%;
-    overflow-x: auto;
-    display: block;
-}
-
-.tabla-usuarios th {
-    background-color: #3498db;
-    color: white;
-}
-
-.tabla-usuarios tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.tabla-usuarios tr:hover {
-    background-color: #e8f4f8;
-}
-
-.tabla-usuarios td {
-    border: 1px solid #ccc;
-    padding: 0.75rem;
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-.tabla-usuarios img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.tabla-usuarios img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.tabla-usuarios th {
-    background-color: #6c63ff;
-    color: white;
-    font-weight: bold;
+.about-me img {
+    width: 80%;
 }
 
 /*----------------------*/
@@ -938,4 +627,9 @@ body:has(.theme-checkbox:checked) .chat-button {
     margin-top: 0.5rem;
     font-size: 0.9rem;
     color: #9b59b6;
+}
+
+iframe {
+    max-width: 100%;
+    border: none;
 }

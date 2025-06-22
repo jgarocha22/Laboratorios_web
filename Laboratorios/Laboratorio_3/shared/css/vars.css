@@ -1,0 +1,35 @@
+:root {
+    /* Colores del header */
+    --header-bg-gradient: linear-gradient(-60deg, #f12e66, #2db8bd, #1a1a1a);
+    --header-text-color: white;
+
+    /* Colores de la navegación */
+    --nav-bg-gradient: linear-gradient(-60deg, #f12e66, #2db8bd, #1a1a1a);
+    --nav-link-color: white;
+    --nav-link-hover-bg: rgba(255, 255, 255, 0.2);
+    --nav-link-active-bg: #142a52;
+
+    /* Colores del botón de chat */
+    --chat-bg-gradient: linear-gradient(-60deg, #f12e66, #2db8bd);
+    --chat-text-color: white;
+    --chat-hover-bg: rgba(255, 255, 255, 0.2);
+
+    /* Colores de los botones config y contacto */
+    --button-primary-bg: #6c63ff;
+    --button-primary-hover-bg: #574bff;
+    --button-secondary-bg: #ccc;
+    --button-secondary-hover-bg: #bbb;
+    --button-volver-bg: #f12e66;
+    --button-volver-hover-bg: #d10c4e;
+    --button-text-color: white;
+    --button-secondary-text-color: #333;
+
+    /* Colores de body Claro */
+    --body-bg-color: rgb(255, 255, 255);
+    --body-text-color: #333;
+    --body-link-color: #6c63ff;
+
+    /* Colores de body Oscuro */
+    --body-bg-color-dark: #121212;
+    --body-text-color-dark: white;
+}
